@@ -1,6 +1,7 @@
-import {useState} from "react";
+
 import SearchBar from "../components/Searchbar";
 import WeatherCard from "../components/WeatherCard";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 interface Weather {
     city:string;
@@ -10,7 +11,7 @@ interface Weather {
 }
 
 function Home() {
-    const [weathers, setweathers] = useState<Weather[]>([]);
+    const [weathers, setweathers] = useLocalStorage<Weather[]>("weathers", []);
 
     const handleSearch = (city: string) => {
 // dummy weather

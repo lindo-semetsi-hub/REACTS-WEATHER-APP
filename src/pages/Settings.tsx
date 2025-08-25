@@ -1,10 +1,11 @@
-import { useState } from "react";
+
 import ThemeToggle from "../components/ThemeToggle";
 import UnitToggle from "../components/UnitToggle";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 function Settings() {
-    const [theme, setTheme] = useState<"light" | "dark">("light");
-    const [unit, setUnit] = useState<"C" | "F">("C");
+    const [theme, setTheme] = useLocalStorage<"light" | "dark">("theme", "light");
+    const [unit, setUnit] = useLocalStorage<"C" | "F">("unit", "C");
     
     const toggleTheme = () => {
         setTheme(theme === "light" ?  "dark" : "light");
