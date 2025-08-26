@@ -13,5 +13,11 @@
     color: #004e92;
 }
 .weather-card p {
-    margin: 0.25rem
+    margin: 0.25rem 0;
+    font-size:0.95rem;
+}
+@media (min-width: 768px) {
+    .weather-card {
+        font-size: 1.1rem;
+    }
 }
