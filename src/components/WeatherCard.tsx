@@ -1,4 +1,4 @@
-import "./WeatherCard.css";
+
 
 interface WeatherCarddProps {
 city: string;
